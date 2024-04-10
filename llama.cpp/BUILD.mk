@@ -24,6 +24,7 @@ include llama.cpp/main/BUILD.mk
 include llama.cpp/imatrix/BUILD.mk
 include llama.cpp/quantize/BUILD.mk
 include llama.cpp/perplexity/BUILD.mk
+include llama.cpp/llama-bench/BUILD.mk
 
 $(LLAMA_CPP_OBJS): private CCFLAGS += -DGGML_MULTIPLATFORM
 
@@ -34,4 +35,5 @@ o/$(MODE)/llama.cpp: 					\
 		o/$(MODE)/llama.cpp/server		\
 		o/$(MODE)/llama.cpp/imatrix		\
 		o/$(MODE)/llama.cpp/quantize		\
-		o/$(MODE)/llama.cpp/perplexity
+		o/$(MODE)/llama.cpp/perplexity		\
+		o/$(MODE)/llama.cpp/llama-bench
